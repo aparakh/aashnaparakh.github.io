@@ -32,7 +32,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 4. Run `npm install` to install the project dependencies
 5. Run `npm run dev` to start the development server
 6. Go to localhost:3000 in your browser, and make changes to see them
-7. Once you push to GH, changes should be automatically deployed from `main` to `https://aashnaparakh.github.io`
+7. Once you push to GH, changes should be automatically deployed from `main` to `https://aparakh.github.io`
 
 ## Additional Reading
 
