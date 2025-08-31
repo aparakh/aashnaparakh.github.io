@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 20, 20, 20;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #121212;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
