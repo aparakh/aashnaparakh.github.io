@@ -1,4 +1,4 @@
-"use client"; // This is a client component
+'use client'; // This is a client component
 import {
   Accordion,
   AccordionBody,
@@ -6,16 +6,16 @@ import {
   Chip,
   IconButton,
   MobileNav,
-  Navbar
-} from "@material-tailwind/react";
-import { FC, useEffect, useState } from "react";
+  Navbar,
+} from '@material-tailwind/react';
+import { FC, useEffect, useState } from 'react';
 import {
   PERSONAL_PROJECTS,
   PROGRAMMING_LANGUAGES,
   TECHNOLOGIES,
   TOOLS,
   WORK_EXPERIENCES,
-} from "./data";
+} from './data';
 
 const Icon = (id: number, open: number): JSX.Element => {
   return (
@@ -26,7 +26,7 @@ const Icon = (id: number, open: number): JSX.Element => {
       strokeWidth={2}
       stroke="currentColor"
       className={`text-white ${
-        id === open ? "rotate-180" : ""
+        id === open ? 'rotate-180' : ''
       } h-5 w-5 transition-transform`}
     >
       <path
@@ -61,11 +61,12 @@ const Home: FC = () => {
 
             {/* Message */}
             <p className="mt-8 font-light">
-              I'm a passionate software engineer with 5+ years of experience building 
-              scalable web applications and cloud solutions. I specialize in React, 
-              Node.js, and AWS, helping teams deliver robust products from concept 
-              to production. When I'm not coding, you'll find me exploring new 
-              technologies, contributing to open source, or hiking local trails.
+              I'm a passionate software engineer with 5+ years of experience
+              building scalable web applications and cloud solutions. I
+              specialize in React, Node.js, and AWS, helping teams deliver
+              robust products from concept to production. When I'm not coding,
+              you'll find me exploring new technologies, contributing to open
+              source, or hiking local trails.
             </p>
             {/* Social Stuff */}
             <div className="flex flex-row w-full items-start mt-6 gap-6">
@@ -115,7 +116,7 @@ const Home: FC = () => {
           </h2>
 
           <div className="flex flex-row gap-x-2 gap-y-3 flex-wrap mb-10">
-            {PROGRAMMING_LANGUAGES.map((language) => (
+            {PROGRAMMING_LANGUAGES.map(language => (
               <Chip
                 value={language}
                 className="rounded-full hover:scale-[1.05] transition duration-300 ease-in-out"
@@ -130,7 +131,7 @@ const Home: FC = () => {
 
           <h2 className="w-full text-left text-xl mt-5 mb-5">Technologies</h2>
           <div className="flex flex-row gap-x-2 gap-y-3 flex-wrap mb-10">
-            {TECHNOLOGIES.map((technology) => (
+            {TECHNOLOGIES.map(technology => (
               <Chip
                 size="md"
                 value={technology}
@@ -145,7 +146,7 @@ const Home: FC = () => {
 
           <h2 className="w-full text-left text-xl mt-5 mb-5">Software Tools</h2>
           <div className="flex flex-row gap-x-2 gap-y-3 flex-wrap mb-10">
-            {TOOLS.map((tool) => (
+            {TOOLS.map(tool => (
               <Chip
                 size="md"
                 value={tool}
@@ -201,11 +202,13 @@ const WorkExperiences: FC = () => {
             open={open === index + 1}
             icon={Icon(index + 1, open)}
             className={`border-b-blue-gray-700 border-b-[1px] ${
-              index === WORK_EXPERIENCES.length - 1 && "border-b-0"
+              index === WORK_EXPERIENCES.length - 1 && 'border-b-0'
             }`}
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
+            onResize={undefined}
+            onResizeCapture={undefined}
           >
             <AccordionHeader
               onClick={() => handleOpen(index + 1)}
@@ -213,6 +216,8 @@ const WorkExperiences: FC = () => {
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
             >
               <div className="flex flex-row gap-5">
                 <img
@@ -230,7 +235,7 @@ const WorkExperiences: FC = () => {
             </AccordionHeader>
             <AccordionBody className="text-white text-base pt-3 pb-8">
               <ul className="list-disc list-outside ml-4">
-                {workExp.description.map((desc) => (
+                {workExp.description.map(desc => (
                   <li>{desc}</li>
                 ))}
               </ul>
@@ -254,11 +259,13 @@ const PersonalProjects: FC = () => {
             open={open === index + 1}
             icon={Icon(index + 1, open)}
             className={`border-b-blue-gray-700 border-b-[1px] ${
-              index === PERSONAL_PROJECTS.length - 1 && "border-b-0"
+              index === PERSONAL_PROJECTS.length - 1 && 'border-b-0'
             }`}
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
+            onResize={undefined}
+            onResizeCapture={undefined}
           >
             <AccordionHeader
               onClick={() => handleOpen(index + 1)}
@@ -266,6 +273,8 @@ const PersonalProjects: FC = () => {
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
             >
               <div className="flex flex-row gap-5">
                 <div className="flex flex-col md:flex-row md:items-center gap-5 justify-between">
@@ -282,7 +291,7 @@ const PersonalProjects: FC = () => {
             </AccordionHeader>
             <AccordionBody className="text-white text-base pt-3 pb-6">
               <div className="flex flex-row gap-4 items-center">
-                {project.description.map((desc) => (
+                {project.description.map(desc => (
                   <>
                     {desc}
                     <br />
@@ -307,7 +316,7 @@ const HeadNav: FC = () => {
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     window.addEventListener(
-      "resize",
+      'resize',
       () => window.innerWidth >= 768 && setOpenNav(false)
     );
   });
@@ -319,20 +328,20 @@ const HeadNav: FC = () => {
 
   const HEADER_LINKS = [
     {
-      link: "#experience",
-      label: "Experience",
+      link: '#experience',
+      label: 'Experience',
     },
     {
-      link: "#skills",
-      label: "Skills",
+      link: '#skills',
+      label: 'Skills',
     },
     {
-      link: "#projects",
-      label: "Projects",
+      link: '#projects',
+      label: 'Projects',
     },
     {
-      link: "#contact",
-      label: "Contact",
+      link: '#contact',
+      label: 'Contact',
     },
   ];
 
@@ -343,11 +352,13 @@ const HeadNav: FC = () => {
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
+        onResize={undefined}
+        onResizeCapture={undefined}
       >
         <div className="flex items-center justify-between text-white w-full">
           <span className="text-xl font-semibold pr-5">AP</span>
           <div className="flex items-center justify-center gap-10">
-            {HEADER_LINKS.map((header) => (
+            {HEADER_LINKS.map(header => (
               <a
                 href={header.link}
                 className="hidden md:inline-block hover:text-primary"
@@ -363,6 +374,8 @@ const HeadNav: FC = () => {
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
             >
               {openNav ? (
                 <svg
@@ -400,7 +413,7 @@ const HeadNav: FC = () => {
         <MobileNav open={openNav}>
           <div className="container mx-auto">
             <div className="flex flex-col gap-4 mt-5 pt-5 border-t-[1px] border-t-blue-gray-500">
-              {HEADER_LINKS.map((header) => (
+              {HEADER_LINKS.map(header => (
                 <a href={header.link} className=" hover:text-primary">
                   {header.label}
                 </a>

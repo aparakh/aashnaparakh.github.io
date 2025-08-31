@@ -3,11 +3,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Project Structure
 
 **Tech Stack:**
+
 - Next.js with TypeScript for the frontend
 - Tailwind CSS for styling
 - Material Tailwind for UI components
 
 **Key Files:**
+
 - `src/app/page.tsx` - Main React component with UI layout and component logic
 - `src/app/data.ts` - Data models and exported arrays for work experience, projects, and skills
 - `public/img/` - All images and SVG assets
@@ -17,6 +19,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - `.github` – GitHub Actions configurations
 
 **Data Flow:**
+
 - `data.ts` exports typed arrays (WORK_EXPERIENCES, PERSONAL_PROJECTS, etc.)
 - `page.tsx` imports and maps over these arrays to render accordions and chips
 - Images referenced in data arrays are served from `public/img/`
@@ -30,8 +33,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 5. Run `npm run dev` to start the development server
 6. Go to localhost:3000 in your browser, and make changes to see them
 7. Once you push to GH, changes should be automatically deployed from `main` to `https://aashnaparakh.github.io`
-
-
 
 ## Additional Reading
 
